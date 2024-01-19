@@ -5,6 +5,7 @@ import FullReload from "vite-plugin-full-reload";
 
 export default defineConfig(() => {
   return {
+    base: "/your-fitness/",
     plugins: [
       ViteImageOptimizer({
         svg: {
