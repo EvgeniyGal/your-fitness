@@ -8,6 +8,7 @@ export default defineConfig(() => {
     base: "/your-fitness/",
     plugins: [
       ViteImageOptimizer({
+        exclude: "icons-sprite.svg",
         svg: {
           multipass: true,
           plugins: [
@@ -36,30 +37,30 @@ export default defineConfig(() => {
         },
         png: {
           // https://sharp.pixelplumbing.com/api-output#png
-          quality: 50,
+          quality: 20,
         },
         jpeg: {
           // https://sharp.pixelplumbing.com/api-output#jpeg
-          quality: 50,
+          quality: 20,
         },
         jpg: {
           // https://sharp.pixelplumbing.com/api-output#jpeg
-          quality: 50,
+          quality: 20,
         },
         tiff: {
           // https://sharp.pixelplumbing.com/api-output#tiff
-          quality: 50,
+          quality: 20,
         },
         // gif does not support lossless compression
         // https://sharp.pixelplumbing.com/api-output#gif
         gif: {},
         webp: {
           // https://sharp.pixelplumbing.com/api-output#webp
-          lossless: true,
+          lossless: false,
         },
         avif: {
           // https://sharp.pixelplumbing.com/api-output#avif
-          lossless: true,
+          lossless: false,
         },
       }),
       injectHTML(),
